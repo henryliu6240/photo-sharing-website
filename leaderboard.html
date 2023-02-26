@@ -1,0 +1,17 @@
+<head>
+    <title>LEADERBOARD</title>
+</head>
+
+<h2>These are the users who have the largest contribution scores on the site!</h2>
+{% for rank, user in topusers.items() %}
+	<p>{{rank}}.{{user[0]}} {{user[1]}}</p>
+{% endfor %}
+
+{% if loggedin %}
+	<h2>This is your contribution score:</h2>
+	<p>{{loggedin}}</p>
+{% endif %}
+
+<ul>
+<li><a href='/'>Home</a></li>
+</ul>
